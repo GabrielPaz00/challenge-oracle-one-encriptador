@@ -26,9 +26,9 @@ function cambiarCSS(advert, cont, copyButton, output){
 }
 function validar (tags, n) {
  	let input = document.getElementById("text-box").value;
+	const bs = /\s/g;
  	const regex = /[a-z]/g;
- 	const bs = /\s/g;
- 	let arr = Array.from(input, (index) => index == index.match(regex) || index == index.match(sb) ? index : null);
+ 	let arr = Array.from(input, (index) => index == index.match(regex) || index == index.match(sb) ? index: null;
 	if (arr.join("") === input && arr.length > 0) {
 		switch(n) {
 		case 1:
