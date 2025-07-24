@@ -16,4 +16,3 @@ Es posible convertir una cadena de texto para la versión encriptada y también 
 
 Cuenta con un botón que copia el texto encriptado/desencriptado así como un botón para restaurar el area dónde se ingresa el texto.
 
-Página: https://gabrielpaz00.github.io/challenge-oracle-one-encriptador/
