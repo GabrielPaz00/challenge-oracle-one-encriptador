@@ -1,384 +1,360 @@
 @import url(color-palette.css);
+
+/* Universal Box Sizing */
+* {
+  box-sizing: border-box;
+}
+
 body {
-	background-color: var(--light-blue-200);
-	font-family:'Roboto', sans-serif;
+  background-color: var(--light-blue-200);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
 }
+
+header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
 button {
-	width: 320px;
-	height: 70px;
-	border-radius: 24px;
-	padding: 24px;
-	text-align: center;
-	font-size: 16px;
-	border: 1px var(--dark-blue-300) solid;
-	font-family: inherit;
-	transition: 0.2s;
+  width: 20rem;
+  height: 4.375rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 0.0625rem solid var(--dark-blue-300);
+  font-family: inherit;
+  transition: 0.2s;
 }
+
 button:hover {
-	cursor: pointer;
-	transition: 0.2s;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
 /*Contenedor principal*/
 .main-conteiner {
-	position: absolute;
-	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 40px 40px 40px 270px;
-	
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  flex-grow: 1; /* Allows it to take available space */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 2rem 3rem; /* 40px = 2.5rem, 270px = 16.875rem */
+  gap: 2rem; /* Added gap between left and right containers */
 }
+
 /*Aside izquierdo*/
 .left-conteiner {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Allows left container to grow */
+  max-width: 60%; /* Limit left container width */
 }
+
 /*Contenedor del logo*/
-.logo {
-	height: 48px;
-	width: 32px;
-	position: relative;
-	left: -156px;
-	box-sizing: border-box;
+header {
+  height: 4rem; /* 48px */
+  width: 100%;
+  padding: 1rem 0; /* Adjust padding */
+  box-sizing: border-box;
 }
+
 /*Area para ingresar texto*/
 #text-box {
-	resize: none;
-	width: 600px;
-	height: 300px;
-	position: relative;
-	top: -80px;
-	color: var(--dark-blue-300);
-	line-height: 150%;
-	font-size: 32px;
-	font-family: inherit;
-	background-color: var(--light-blue-200);
-	text-align: left;
-	border: none;
+  resize: none;
+  width: 100%; /* Make it responsive */
+  max-width: 37.5rem; /* 600px */
+  height: 18.75rem; /* 300px */
+  color: var(--dark-blue-300);
+  line-height: 1.5;
+  font-size: 2rem; /* 32px */
+  font-family: inherit;
+  background-color: var(--light-blue-200);
+  text-align: left;
+  border: none;
 }
+
 #text-box:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
+
 #text-box:focus {
-	outline-style: solid;
-	outline-color: var(--light-blue-200);
+  outline-style: solid;
+  outline-color: var(--light-blue-200);
+  outline-width: 0.125rem; /* Add a subtle outline */
 }
+
 #text-box::placeholder {
-	color: var(--dark-blue-300);
-	opacity: 0.8;
+  color: var(--dark-blue-300);
+  opacity: 0.8;
 }
+
 /*Contenedores para botones de enciptar y desencriptar*/
 .conteiner-items {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+
 /*Icono de signo de explamación y su caption*/
 .figure-exclamation-circle {
-	display: flex;
-	gap: 8px;
-	width: 300px;
+  display: flex;
+  align-items: center; /* Vertically align icon and text */
+  gap: 0.5rem;
+  width: 100%; /* Make it responsive */
+  max-width: 18.75rem;
+  margin-bottom: 1rem; /* Add some space below */
 }
-.figure-exclamation-circle figcaption{
-	color: var(--grey-400);
-	font-family: inherit;
-}
-/*Botones de enciptar y desencriptar*/ 
-.conteiner-btns {
-	width: 670px;
-	height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: left;
-	gap: 24px;
-	padding-bottom: 22px;
-}
-.btn1 {
-	color: white;
-	background-color: var(--dark-blue-300);
-}
-.btn1:hover {
-	background-color: var(--dark-blue-400);
-}
-.btn1:active {
-	background-color: var(--dark-blue-500);
-	scale: 1.04;
-}
-.btn2, .copy-btn {
-	color: var(--dark-blue-300);
-	background-color: transparent;
-}
-.btn2:hover {
-	background-color: var(--light-blue-300);
-} 
-.btn2:active {
-	background-color: var(--light-blue-400);
-	scale: 1.04;
-}
-.clean-btn {
-	background-color: var(--light-blue-200);
-	color: var(--dark-blue-300);
 
+.figure-exclamation-circle figcaption {
+  color: var(--grey-400);
+  font-family: inherit;
+  font-size: 0.875rem; /* Adjusted font size */
 }
+
+/*Botones de enciptar y desencriptar*/
+.conteiner-btns {
+  width: 100%;
+  max-width: 41.875rem; /* 670px */
+  height: auto; /* Allow height to adjust */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1.5rem;
+  padding-bottom: 1.375rem;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.btn1 {
+  color: white;
+  background-color: var(--dark-blue-300);
+}
+
+.btn1:hover {
+  background-color: var(--dark-blue-400);
+}
+
+.btn1:active {
+  background-color: var(--dark-blue-500);
+  transform: scale(1.02); /* Use transform for smooth scaling */
+}
+
+.btn2,
+.copy-btn {
+  color: var(--dark-blue-300);
+  background-color: transparent;
+}
+
+.btn2:hover {
+  background-color: var(--light-blue-300);
+}
+
+.btn2:active {
+  background-color: var(--light-blue-400);
+  transform: scale(1.02);
+}
+
+.clean-btn {
+  background-color: var(--light-blue-200);
+  color: var(--dark-blue-300);
+}
+
 .clean-btn:hover {
-	background-color: var(--light-blue-300);
+  background-color: var(--light-blue-300);
 }
+
 .clean-btn:active {
-	background-color: var(--light-blue-400);
-	scale: 1.04;
+  background-color: var(--light-blue-400);
+  transform: scale(1.02);
 }
+
 .copy-btn:hover {
-	background-color: var(--light-blue-200);
+  background-color: var(--light-blue-200);
 }
+
 .copy-btn:active {
-	background-color: var(--light-blue-300);
-	scale: 1.04;
+  background-color: var(--light-blue-300);
+  transform: scale(1.02);
 }
+
 /*Aside derecho*/
 .right-conteiner {
-	box-sizing: border-box;
-	background-color: white;
-	width: 400px;
-	height: 100%;
-	right: 0;
-	border-radius: 30px;
-	padding: 30px;
-	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  box-sizing: border-box;
+  background-color: white;
+  width: 25rem; /* 400px */
+  min-width: 20rem; /* Minimum width for smaller screens */
+  height: 80vh;
+  border-radius: 1.875rem;
+  padding: 1rem;
+  margin: 0;
+  transition: 0.2s;
+  box-shadow: 0 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center text within this container */
 }
-/*Mientras no haya mensaje*/
-/*Imagen principal*/
+
+/*While there is no message*/
+/*Main image*/
 .right-conteiner .dibujo {
-	box-sizing: border-box;
-	text-align: center;
-	font-family: inherit;
-	padding: 32px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: inherit;
+  padding: 32px;
+}
 
+.right-conteiner .dibujo img {
+  width: 330px;
+  height: 300px;
+  max-width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
 }
-.right-conteiner.dibujo img {
-	width: 330px;
-	height: 300px;
+
+.right-conteiner .dibujo b {
+  font-weight: bold;
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.25; /* 30px */
+  margin-bottom: 1rem; /* Space below bold text */
+  display: block; /* Make it a block element to apply margin */
 }
-.right-conteiner .dibujo b	{
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 30px;
-}
+
 .right-conteiner .dibujo p {
-	line-height: 24px;
-	font-size: 16px;
-	color: var(--grey-400);
-}
-/*Mientras sí haya mensaje*/
-/*Mensaje desencriptado*/
-#message-des {
-	color: var(--gray-400);
-	text-align: left;
-	font-size: 24px;
-	display: block;
-	line-height: 150%;
-}
-/*Boton para copiar texto*/
-.copy-btn{
-	display: none;
-}
-.right-conteiner figure.dibujo {
-	display: block;
+  line-height: 1.5; /* 24px */
+  font-size: 1rem; /* 16px */
+  color: var(--grey-400);
 }
 
-/*Vista de celular*/
-@media only screen and (max-width: 640px) {
-	.main-conteiner {
-		box-sizing: border-box;
-		height: 110%;
-		flex-direction: column;
-		align-items: center;
-		justify-content: start;
-		padding: 0;
-		padding: 16px;
-		gap: calc(4%);
-	}
-	/*Aside izquierdo*/
-	.left-conteiner {
-		width: calc(100%);
-	}
-	.logo {
-		scale: calc(70%);
-		top: 0px;
-		left: 8px;
-		box-sizing: border-box;
-	}
-	#text-box {
-		width: calc(90%);
-		resize: none;
-		scale: 0.8;
-		position: relative;
-		top: 16px;
-		left: -20px;
-		font-size: 32px;
-	}
-	.conteiner-items {
-		height: calc(60%);
-		width: calc(100%);
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		align-items: center;
-		justify-content: center;
-		box-sizing: border-box;
-	}
-	.figure-exclamation-circle {
-		width: 280px;
-		align-self: start;
-		align-items: center;
-		justify-content: center;
-	}
-	figure.figure-exclamation-circle figcaption{
-		font-size: 14px;
-	}
-	.conteiner-btns{
-		height: calc(40%);
-		width: calc(100%);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: start;
-		gap: 16px;
-		padding-bottom: 0px;
-		box-sizing: border-box;
-	}
-	/*Aside derecho*/
-	.right-conteiner {
-		box-sizing: border-box;
-		width: calc(100%);
-		height: calc(25%);
-		transition: 0.2s;
-		margin: 0;
-		padding: 16px;
-		justify-content: center;
-	}
-	.right-conteiner .dibujo {
-		padding: 0px;
-	}
-	.right-conteiner .dibujo img {
-		display: none;
-	}
-	/*Botones*/
-	button {
-		width: 100%;
-		height: 80%;
-		margin: 0;
-		padding: 0;
-		padding: 16px;
-		font-size: 18px;
-	}
-	#copy-text {
-		width: 320px;
-		height: 60px;
-		margin: 0;
-		padding: 0;
-		font-size: 16px;
-		display: none;
-	}
+/*While there is a message*/
+/*Decrypted message*/
+#message-des {
+  color: var(--grey-400);
+  text-align: left;
+  font-size: 1.5rem;
+  display: block;
+  line-height: 1.5;
+  padding: 1rem; /* Add padding for text */
+  word-wrap: break-word; /* Ensure long words break */
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+  flex-grow: 1; /* Allow message to take space */
 }
-/*Vista de tablet*/
-@media only screen and (max-width: 1080px) and (min-width: 641px){
-	.main-conteiner {
-		box-sizing: border-box;
-		height: 110%;
-		flex-direction: column;
-		align-items: center;
-		justify-content: start;
-		padding: 0;
-		padding:20px;
-		gap: calc(4%);
-	}
-	/*Aside izquierdo*/
-	.left-conteiner {
-		width: calc(80%);
-	}
-	.logo {
-		scale: calc(80%);
-		top: 0px;
-		left: 0px;
-		box-sizing: border-box;
-	}
-	#text-box {
-		width: calc(90%);
-		resize: none;
-		scale: 0.8;
-		position: relative;
-		top: 16px;
-		left: -64px;
-		font-size: 32px;
-	}
-	.conteiner-items {
-		height: calc(60%);
-		width: calc(100%);
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		align-items: center;
-		justify-content: center;
-		box-sizing: border-box;
-	}
-	.figure-exclamation-circle {
-		width: 280px;
-		align-self: start;
-		align-items: center;
-		justify-content: center;
-	}
-	figure.figure-exclamation-circle figcaption{
-		font-size: 14px;
-	}
-	.conteiner-btns{
-		height: calc(40%);
-		width: calc(100%);
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: start;
-		gap: 16px;
-		padding-bottom: 0px;
-		box-sizing: border-box;
-	}
-	/*Aside derecho*/
-	.right-conteiner {
-		box-sizing: border-box;
-		width: calc(80%);
-		height: calc(20%);
-		transition: 0.2s;
-		margin: 0;
-		padding: 16px;
-		justify-content: center;
-	}
-	.right-conteiner .dibujo {
-		padding: 0px;
-	}
-	.right-conteiner .dibujo img {
-		display: none;
-	}
-	/*Botones*/
-	button {
-		width: 100%;
-		height: 80%;
-		margin: 0;
-		padding: 0;
-		padding: 16px;
-		font-size: 18px;
-	}
-	#copy-text {
-		width: 320px;
-		height: 60px;
-		margin: 0;
-		padding: 0;
-		font-size: 16px;
-		display: none;
-	}
+
+/*Button to copy text*/
+.copy-btn {
+  display: none; /* Initially hidden */
+  width: 100%;
+  max-width: 20rem; /* Limit copy button width */
+  margin-top: 1rem; /* Space above copy button */
+}
+
+/* Ensure figure.dibujo is shown initially */
+.right-conteiner figure.dibujo {
+  display: block;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 640px) {
+  body {
+    padding: 0 1rem; /* Add horizontal padding to body */
+  }
+
+  .main-conteiner {
+    flex-direction: column;
+    padding: 1rem 0; /* Adjust padding for mobile */
+    height: auto; /* Allow height to adjust based on content */
+    align-items: center; /* Center content horizontally */
+    gap: 1.5rem; /* Adjust gap */
+  }
+
+  .left-conteiner {
+    width: 100%; /* Take full width */
+    max-width: none; /* Remove max-width restriction */
+    padding: 0 0.5rem; /* Add some padding */
+  }
+
+  header {
+    width: auto; /* Auto width */
+    padding: 0.5rem 0; /* Adjust padding */
+    text-align: left;
+  }
+
+  #text-box {
+    width: 100%; /* Full width on mobile */
+    max-width: none;
+    height: 12.5rem; /* Adjust height for mobile */
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .figure-exclamation-circle {
+    width: 100%;
+    justify-content: center; /* Center icon and caption */
+    font-size: 0.75rem;
+  }
+
+  .conteiner-btns {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%;
+    max-width: none;
+    padding-bottom: 0; /* Remove bottom padding */
+    align-items: center; /* Center buttons horizontally */
+    gap: 1rem; /* Adjust gap between stacked buttons */
+  }
+
+  button {
+    width: 100%; /* Full width for buttons on mobile */
+    height: 3.5rem; /* Adjust button height */
+    padding: 0.8rem; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .right-conteiner {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Auto height for content */
+    min-height: 10rem; /* Minimum height for the right container */
+    padding: 1rem;
+    margin-top: 1rem; /* Space from elements above */
+  }
+
+  .right-conteiner .dibujo {
+    padding: 1rem; /* Adjusted padding */
+  }
+
+  .right-conteiner .dibujo img {
+    display: none; /* Hide image on mobile */
+  }
+
+  .right-conteiner .dibujo b {
+    font-size: 1.25rem; /* Smaller font size */
+    line-height: 1.3;
+  }
+
+  .right-conteiner .dibujo p {
+    font-size: 0.875rem; /* Smaller font size */
+    line-height: 1.4;
+  }
+
+  #message-des {
+    font-size: 1.2rem; /* Adjusted font size for mobile */
+    text-align: center; /* Center text when displayed */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .copy-btn {
+    width: 100%; /* Full width for copy button */
+    height: 3.5rem; /* Adjust height */
+    margin: 1rem auto 0 auto; /* Center button with margin */
+    font-size: 1rem; /* Adjust font size */
+  }
 }
