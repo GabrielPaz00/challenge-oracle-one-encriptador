@@ -1,18 +1,54 @@
-# challenge-oracle-one-encriptador
+# 🔐 Encriptador de Texto - Challenge Oracle ONE
 
-Página web que encripta textos para intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.
+¡Bienvenido al proyecto **Encriptador de Texto**!  
+Esta aplicación web fue creada como parte del **Challenge Oracle ONE - Alura Latam**, y permite encriptar y desencriptar mensajes usando una lógica sencilla de sustitución de letras. Es ideal para intercambiar mensajes secretos entre quienes conozcan la "clave" de encriptación.
 
-Las "llaves" de encriptación que utilizadas son las siguientes:
+---
 
-La letra "e" es convertida para "enter".
-La letra "i" es convertida para "imes".
-La letra "a" es convertida para "ai".
-La letra "o" es convertida para "ober".
-La letra "u" es convertida para "ufat".
+## 🚀 ¿Qué hace esta app?
 
-Es posible convertir una cadena de texto para la versión encriptada y también devolvuelve dicha cadena de texto encriptada para su versión original.
+La aplicación permite:
 
-  ° La página sólo toma en cuenta las letras minusculas para la encriptación y decriptación. No admite letras con acentos ni caracteres especiales.
+- ⌨️ Ingresar un texto en minúsculas sin acentos ni caracteres especiales.
+- 🔐 Encriptar el texto según una clave de sustitución específica.
+- 🔓 Desencriptar el texto encriptado a su forma original.
+- 📋 Copiar el texto resultante al portapapeles.
+- 🔄 Restaurar el área de entrada para escribir un nuevo mensaje.
 
-Cuenta con un botón que copia el texto encriptado/desencriptado así como un botón para restaurar el area dónde se ingresa el texto.
+---
 
+## 🧠 Lógica de Encriptación
+
+Las siguientes sustituciones de letras se realizan para encriptar el texto:
+
+| Letra original | Reemplazo |
+| -------------- | --------- |
+| `e`            | `enter`   |
+| `i`            | `imes`    |
+| `a`            | `ai`      |
+| `o`            | `ober`    |
+| `u`            | `ufat`    |
+
+> ⚠️ **Importante:**
+>
+> - Solo se aceptan letras minúsculas.
+> - No se permiten acentos ni caracteres especiales.
+
+---
+
+## 📸 Vista previa
+
+<!-- Puedes reemplazar con una imagen real -->
+
+![alt text](image.png)
+
+---
+
+## 🧩 Funcionalidades
+
+- ✅ Encriptar texto en tiempo real.
+- ✅ Desencriptar texto previamente encriptado.
+- ✅ Copiar el texto resultante.
+- ✅ Botón para limpiar el área de texto y comenzar de nuevo.
+
+---
