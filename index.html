@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/logo.svg">
-	<link rel="stylesheet" type="text/css" href="styles/reset.css">
-	<link rel="stylesheet" type="text/css" href="styles/color-palette.css">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<title>Challenge</title>
-</head>
-<body>
-	<main class="main-conteiner">
-		<section class="left-conteiner">
-			<div class="logo">
-				<img src="images/logo.svg" alt="Logo Alura">
-			</div>
-			<textarea type="text" id="text-box" placeholder="Ingrese el texto aquí"></textarea>
-			<div class="conteiner-items">
-				<figure class="figure-exclamation-circle">
-					<img src="images/exclamation-circle.svg" class="exclamation-circle">
-					<figcaption>Sólo letras minúsculas y sin acentos.</figcaption>
-				</figure>
-				<div class="conteiner-btns">	
-					<button class="btn1" onclick="validar(tags, 1);">Encriptar</button>
-					<button class="btn2" onclick="validar(tags, 2);">Desencriptar</button>
-					<button class="clean-btn" id="clean-btn" onclick="cleanTextArea(tags);">Limpiar</button>
-				</div>
-			</div>
-		</section>
-		<section class="right-conteiner" id="rc">
-			<figure class="dibujo" id="fd">
-				<img src="images/dibujo.svg">
-				<figcaption>
-					<b>Ningún mensaje fue encontrado</b>
-					<br/><br/>
-					<p>Ingresa el texto que desees encriptar o desencriptar.</p>
-				</figcaption>
-			</figure>
-			<h1 id="message-des"></h1>
-			<button class="copy-btn" id="copy-text" onclick="copyText(tags)">Copiar</button>
-		</section>
-	</main>
-<script type="text/javascript" src="javascript/index.js" onload></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/color-palette.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <title>Challenge</title>
+  </head>
+  <body>
+    <header class="logo">
+      <img src="images/logo.svg" alt="Logo Alura" />
+    </header>
+    <main class="main-conteiner">
+      <section class="left-conteiner">
+        <textarea
+          type="text"
+          id="text-box"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+        <div class="conteiner-items">
+          <figure class="figure-exclamation-circle">
+            <img
+              src="images/exclamation-circle.svg"
+              class="exclamation-circle"
+            />
+            <figcaption>Sólo letras minúsculas y sin acentos.</figcaption>
+          </figure>
+          <div class="conteiner-btns">
+            <button class="btn1" onclick="encrypt();">Encriptar</button>
+            <button class="btn2" onclick="decrypt();">Desencriptar</button>
+            <button class="clean-btn" id="clean-btn" onclick="clearInput();">
+              Limpiar
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="right-conteiner" id="rc">
+        <figure class="dibujo" id="fd">
+          <img src="images/dibujo.svg" />
+          <figcaption>
+            <b>Ningún mensaje fue encontrado</b>
+            <br /><br />
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </figcaption>
+        </figure>
+        <h1 id="message-des"></h1>
+        <button class="copy-btn" id="copy-text" onclick="copyText()">
+          Copiar
+        </button>
+      </section>
+    </main>
+    <script type="text/javascript" src="javascript/index.js" onload></script>
+  </body>
 </html>
